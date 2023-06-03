@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator ekološkog otiska</title>
+	<link rel="stylesheet" media="screen and (max-width:530px)" href="phone.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Kalkulator ekološkog otiska</h1>
+
+	<form id="kalkulator">
+		<h2>Transport</h2>
+		<label for="kilometraza">Kilometraža automobila (godišnje): </label>
+		<input type="number" id="kilometraza" name="kilometraza"><br>
+
+		<label for="gorivo">Potrošnja goriva (l/godišnje): </label>
+		<input type="number" id="gorivo" name="gorivo"><br>
+
+		<h2>Ishrana</h2>
+		<label for="meso">Količina mesa koju konzumirate (kg/godišnje): </label>
+		<input type="number" id="meso" name="meso"><br>
+
+		<label for="voce-povrce">Količina voća i povrća koje konzumirate (kg/godišnje): </label>
+		<input type="number" id="voce-povrce" name="voce-povrce"><br>
+
+		
+		
+		<h2>Proizvodi</h2>
+		<label for="dezodorans">Količina dezodoransa koju konzumirate (kom./godišnje): </label>
+		<input type="number" id="dezodorans" name="dezodorans"><br>
+
+		<label for="toalet-papir">Količina toalet papira koju konzumirate (kom./godišnje): </label>
+		<input type="number" id="toalet-papir" name="toalet-papir"><br>
+
+		<h2>Stambeni prostor</h2>
+		<label for="veličina-prostora">Veličina prostora u kom živite (m2): </label>
+		<input type="number" id="veličina-prostora" name="veličina-prostora"><br>
+
+		<label for="smeće">Količina smeća koju bacate (kg/godišnje): </label>
+		<input type="number" id="smeće" name="smeće"><br>
+		
+		<h2>Potrosnja</h2>
+		<label for="potrošnja-struje">Potrošnja struje (kWh/godišnje): </label>
+		<input type="number" id="potrošnja-struje" name="potrošnja-struje"><br>
+
+		<label for="voda">Količina vode  (l/godišnje): </label>
+		<input type="number" id="voda" name="voda"><br>
+
+		<button type="button" onclick="izracunajEkoloskiOtisak()">Izračunaj</button>
+	</form>
+
+	<div id="rezultat"></div>
+
+	<script>
+		function izracunajEkoloskiOtisak() {
+			// uzimamo vrednosti unete u formu
+			var kilometraza = document.getElementById("kilometraza").value;
+			var gorivo = document.getElementById("gorivo").value;
+			var meso = document.getElementById("meso").value;
+			var vocePovrce = document.getElementById("voce-povrce").value;
+			var toaletPapir = document.getElementById("toalet-papir").value;
+			var dezodorans = document.getElementById("dezodorans").value;
+			var potrošnjaStruje = document.getElementById("potrošnja-struje").value;
+			var voda = document.getElementById("voda").value;
+			var veličinaProstora = document.getElementById("veličina-prostora").value;
+			var smeće = document.getElementById("smeće").value;
+
+			// izračunavamo ekološki otisak
+			var ekoloskiOtisak = (kilometraza * 0.2) + (gorivo * 0.4) + (meso * 2.5) + (vocePovrce * 0.1) + (toaletPapir * 0.1) + (dezodorans * 0.09) + (potrošnjaStruje * 0.3) + (voda * 0.04) + (veličinaProstora * 0.03) + (smeće * 0.08);
+
+			// prikazujemo rezultat na stranici
+			document.getElementById("rezultat").innerHTML = "Vaš ekološki otisak iznosi " + ekoloskiOtisak.toFixed(2) + " hektara.";
+		}
+	</script>
+	
+</body>
+</html>
+
+

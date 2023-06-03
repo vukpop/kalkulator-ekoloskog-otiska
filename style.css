@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator ekološkog otiska</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+
+		h1 {
+			text-align: center;
+			margin-bottom: 30px;
+            background-color: aquamarine;
+		}
+
+		form {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			margin-bottom: 30px;
+		}
+
+		h2 {
+			margin-top: 30px;
+			margin-bottom: 10px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		input[type="number"] {
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 200px;
+			margin-bottom: 20px;
+		}
+
+		button {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #3e8e41;
+		}
+
+		#rezultat {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			font-size: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Kalkulator ekološkog otiska</h1>
+
+	<form id="kalkulator">
+		<h2>Transport</h2>
+		<label for="kilometraza">Kilometraža automobila (godišnje): </label>
+		<input type="number" id="kilometraza" name="kilometraza"><br>
+
+		<label for="potrosnja-struje">Potrošnja struje (kWh/godišnje): </label>
+		<input type="number" id="potrosnja-struje" name="potrosnja-struje"><br>
+
+		<h2>Ishrana</h2>
+		<label for="meso">Količina mesa koju konzumirate (kg/godišnje): </label>
+		<input type="number" id="meso" name="meso"><br>
+
+		<label for="voce-povrce">Količina voća i povrća koje konzumirate (kg/godišnje): </label>
+		<input type="number" id="voce-povrce" name="voce-povrce"><br>
+
+		<button type="button" onclick="izracunajEkoloskiotisak
