@@ -4,6 +4,10 @@
 <head>
 	<title>Kalkulator ekološkog otiska</title>
 	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
 		body {
 			font-family: Arial, sans-serif;
 			background-color: #f2f2f2;
@@ -13,11 +17,11 @@
 		h1 {
 			text-align: center;
 			margin-bottom: 30px;
-            background-color: aquamarine;
+            background-color: green;
 		}
 
 		form {
-			background-color: #fff;
+			background: url('2.jpg') no-repeat center center/cover;
 			padding: 20px;
 			border-radius: 10px;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -37,7 +41,7 @@
 		input[type="number"] {
 			padding: 5px;
 			border-radius: 5px;
-			border: 1px solid #ccc;
+			border: 1px solid green;
 			width: 200px;
 			margin-bottom: 20px;
 		}
