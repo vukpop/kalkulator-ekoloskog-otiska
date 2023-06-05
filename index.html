@@ -70,7 +70,7 @@
 			var avion = document.getElementById("avion").value;
 
 			// izračunavamo ekološki otisak
-			var ekoloskiOtisak = (kilometraza * 0.2) + (gorivo * 0.4) + (meso * 2.5) + (vocePovrce * 0.1) + (toaletPapir * 0.1) + (dezodorans * 0.09) + (potrošnjaStruje * 0.3) + (voda * 0.04) + (veličinaProstora * 0.03) + (smeće * 0.08) + (avion * 0.1);
+			var ekoloskiOtisak = (kilometraza * 0.2) + (gorivo * 0.4) + (meso * 0.04) + (vocePovrce * 0.9) + (toaletPapir * 0.1) + (dezodorans * 0.09) + (potrošnjaStruje * 0.3) + (voda * 0.04) + (veličinaProstora * 0.03) + (smeće * 0.08) + (avion * 0.1);
 
 			// prikazujemo rezultat na stranici
 			document.getElementById("rezultat").innerHTML = "Vaš ekološki otisak iznosi " + ekoloskiOtisak.toFixed(2) + " hektara.";
