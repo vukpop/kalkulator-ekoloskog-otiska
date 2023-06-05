@@ -23,7 +23,7 @@
 		<label for="meso">Koliko hrane koju jedete je neprerađena ili lokalno uzgojena? (kg/godišnje): </label>
 		<input type="number" id="meso" name="meso"><br>
 
-		<label for="voce-povrce">Koliku količine hrane koju jedete je na bazi životinja? (kg/godišnje): </label>
+		<label for="voce-povrce">Kolika Količina hrane koju jedete je na bazi životinja? (kg/godišnje): </label>
 		<input type="number" id="voce-povrce" name="voce-povrce"><br>
 
 		
@@ -70,7 +70,7 @@
 			var avion = document.getElementById("avion").value;
 
 			// izračunavamo ekološki otisak
-			var ekoloskiOtisak = (kilometraza * 0.2) + (gorivo * 0.4) + (meso * 0.04) + (vocePovrce * 0.9) + (toaletPapir * 0.1) + (dezodorans * 0.09) + (potrošnjaStruje * 0.3) + (voda * 0.04) + (veličinaProstora * 0.03) + (smeće * 0.08) + (avion * 0.1);
+			var ekoloskiOtisak = (kilometraza * 0.2) + (gorivo * 0.4) + (meso * 0.04) + (vocePovrce * 0.9) + (toaletPapir * 0.1) + (dezodorans * 0.09) + (potrošnjaStruje * 0.3) + (voda * 0.0008) + (veličinaProstora * 0.03) + (smeće * 0.08) + (avion * 0.1);
 
 			// prikazujemo rezultat na stranici
 			document.getElementById("rezultat").innerHTML = "Vaš ekološki otisak iznosi " + ekoloskiOtisak.toFixed(2) + " hektara.";
