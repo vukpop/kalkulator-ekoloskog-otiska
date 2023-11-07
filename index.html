@@ -6,54 +6,62 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Kalkulator ekološkog otiska</h1>
-
-	<form id="kalkulator">
-		<h2>Transport</h2>
-		<label for="kilometraza">Koliko godišnje pređete sa automobilom? (km/godišnje): </label>
-		<input type="number" id="kilometraza" name="kilometraza"><br>
-
-		<label for="gorivo">Koliko goriva potrošite na godišnjem nivou? (l/godišnje): </label>
-		<input type="number" id="gorivo" name="gorivo"><br>
-
-		<label for="avion">Koliku sati provedete u avionu godišnje? (čas): </label>
-		<input type="number" id="avion" name="avion"><br>
-
-		<h2>Ishrana</h2>
-		<label for="meso">Koliko hrane koju jedete je neprerađena ili lokalno uzgojena? (kg/godišnje): </label>
-		<input type="number" id="meso" name="meso"><br>
-
-		<label for="voce-povrce">Kolika količina hrane koju jedete je na bazi životinja? (kg/godišnje): </label>
-		<input type="number" id="voce-povrce" name="voce-povrce"><br>
-
+	<header>
+		<h1>Kalkulator ekološkog otiska</h1>
+	</header>
+	<main>
+		<form id="kalkulator">
+			<div class="forma">
+				<h2>Transport</h2>
+				<label for="kilometraza">Koliko godišnje pređete sa automobilom? (km/godišnje): </label>
+				<input type="number" id="kilometraza" name="kilometraza"><br>
 		
-		<h2>Proizvodi</h2>
-		<label for="dezodorans">Koliko dezodoransa potrošite na godišnjem nivou? (kom./godišnje): </label>
-		<input type="number" id="dezodorans" name="dezodorans"><br>
-
-		<label for="toalet-papir">Koliko toalet papira potrošite na godišnjem nivou?(kom./godišnje): </label>
-		<input type="number" id="toalet-papir" name="toalet-papir"><br>
-
-		<h2>Stambeni prostor</h2>
-		<label for="veličina-prostora">Veličina prostora u kom živite? (m2): </label>
-		<input type="number" id="veličina-prostora" name="veličina-prostora"><br>
-
-		<label for="smeće">Količina smeća koju bacate na godišnjem nivou? (kg/godišnje): </label>
-		<input type="number" id="smeće" name="smeće"><br>
+				<label for="gorivo">Koliko goriva potrošite na godišnjem nivou? (l/godišnje): </label>
+				<input type="number" id="gorivo" name="gorivo"><br>
 		
-		<h2>Potrosnja</h2>
-		<label for="potrošnja-struje">Koliko struje potrošite na godišnjem nivou? (kWh/godišnje): </label>
-		<input type="number" id="potrošnja-struje" name="potrošnja-struje"><br>
-
-		<label for="voda">Količina vode koju potrošite na godišnjem nivou? (l/godišnje): </label>
-		<input type="number" id="voda" name="voda"><br>
-
-		<button type="button" onclick="izracunajEkoloskiOtisak()">Izračunaj</button>
-		<div id="rezultat"></div>
-	</form>
-
-	
-
+				<label for="avion">Koliku sati provedete u avionu godišnje? (čas): </label>
+				<input type="number" id="avion" name="avion"><br>
+		
+				<h2>Ishrana</h2>
+				<label for="meso">Koliko hrane koju jedete je neprerađena ili lokalno uzgojena? (kg/godišnje): </label>
+				<input type="number" id="meso" name="meso"><br>
+		
+				<label for="voce-povrce">Kolika količina hrane koju jedete je na bazi životinja? (kg/godišnje): </label>
+				<input type="number" id="voce-povrce" name="voce-povrce"><br>
+		
+				
+				<h2>Proizvodi</h2>
+				<label for="dezodorans">Koliko dezodoransa potrošite na godišnjem nivou? (kom./godišnje): </label>
+				<input type="number" id="dezodorans" name="dezodorans"><br>
+		
+				<label for="toalet-papir">Koliko toalet papira potrošite na godišnjem nivou?(kom./godišnje): </label>
+				<input type="number" id="toalet-papir" name="toalet-papir"><br>
+		
+				<h2>Stambeni prostor</h2>
+				<label for="veličina-prostora">Veličina prostora u kom živite? (m2): </label>
+				<input type="number" id="veličina-prostora" name="veličina-prostora"><br>
+		
+				<label for="smeće">Količina smeća koju bacate na godišnjem nivou? (kg/godišnje): </label>
+				<input type="number" id="smeće" name="smeće"><br>
+				
+				<h2>Potrosnja</h2>
+				<label for="potrošnja-struje">Koliko struje potrošite na godišnjem nivou? (kWh/godišnje): </label>
+				<input type="number" id="potrošnja-struje" name="potrošnja-struje"><br>
+		
+				<label for="voda">Količina vode koju potrošite na godišnjem nivou? (l/godišnje): </label>
+				<input type="number" id="voda" name="voda"><br>
+		
+				<button type="button" onclick="izracunajEkoloskiOtisak()">Izračunaj</button>
+				<div id="rezultat"></div>
+			</div>
+		</form>
+	</main>
+	<footer>
+		<div class="dno">
+			<a href="https://www.instagram.com/ekoloska_sekcija_ts_obrenovac/" target="_blank"><img src="instagram.png" alt="Instagram profil" width="50px" height="50px"></a>
+			<p>Copyright ©ekoloska_sekcija_ts_obrenovac. All rights reserved.Made by Vuk Popović.</p>
+		</div>
+	</footer>
 	<script>
 		function izracunajEkoloskiOtisak() {
 			// uzimamo vrednosti unete u formu
@@ -76,13 +84,6 @@
 			document.getElementById("rezultat").innerHTML = "Vaš ekološki otisak iznosi " + ekoloskiOtisak.toFixed(2) + " hektara.";
 		}
 	</script>
-	<section id="contact">
-        <h1 class="headings">Možete pogledati i naš instagram profil <a href="https://www.instagram.com/ekoloska_sekcija_ts_obrenovac/">ovde.</a></h1>
-		<footer>
-			Copyright ©ekoloska_sekcija_ts_obrenovac. All rights reserved.Made by Vuk Popović and Valentina Maričić.
-		</footer>
-    </section>
-	
 </body>
 </html>
 
